@@ -1,0 +1,26 @@
+<h1>Products</h1>
+<ul>
+    {% for products in Products %}
+    
+    <li>
+        
+       <p>
+        Product Id : {{ products.product_id }}
+       </p> 
+       <p> Product Name: {{ products.product_name}} </p>
+       
+       <p>Category : {{ products.category }}</p>
+       <p>SubCategory {{ products.subcategory }}</p>
+       <p>Price : {{ products.price }} </p>
+       <p>Description : {{ products.desc }}</p>
+       <p> Publish Date : {{ products.pub_date }}</p>
+      
+        
+         
+        
+          
+       </li>
+
+    {% endfor %}
+</ul>
+
