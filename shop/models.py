@@ -1,3 +1,4 @@
+from math import degrees, trunc
 from django.db import models
 
 # Create your models here.
@@ -13,3 +14,15 @@ class Product(models.Model):
 
     def __str__(self):
         return f"{self.product_id} {self.product_name} {self.desc} "  
+
+
+
+class Contact(models.Model):
+    msg_id=models.AutoField(primary_key=True)
+    name=models.CharField(max_length=70)
+    email=models.CharField(max_length=70,default="")
+    phone=models.CharField(max_length=50,default="")
+    desc=models.CharField(max_length=500,default="")
+
+    def __str__(self):
+        return f"{self.name} {self.email} {self.phone} {self.desc} "
